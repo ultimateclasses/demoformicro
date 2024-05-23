@@ -1,19 +1,11 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
-            steps {
-                sh 'echo "test1"'
-            }
-        }
-        stage('Test') { 
-            steps {
-                sh 'echo "test2"'
-            }
-        }
         stage('Deploy') { 
             steps {
-                sh 'echo "test3"'
+	   
+                sh 'docker build -t sureshimage2 .'
+		sh 'docker container run -itd --name mycontainer --image sureshimage2:latest'
             }
         }
     }
