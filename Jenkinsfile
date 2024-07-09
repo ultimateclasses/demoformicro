@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker build -t sureshimage2 .'
-		sh 'docker container run -itd --name mybuildcontainer sureshimage2:latest'
+                sh 'sudo docker build -t sureshimage2 .'
+		sh 'sudo docker container run -itd --name mybuildcontainer sureshimage2:latest'
             }
         }
 
