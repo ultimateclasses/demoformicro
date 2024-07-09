@@ -4,7 +4,7 @@ pipeline {
         stage('build somefiles') { 
             steps {
 	        sh 'mvn install'
-		sh 'cp -r /root/.m2/repository/com/mycompany/app/my-app/1/my-app-1.jar /root/'
+		sh 'sudo cp -r /root/.m2/repository/com/mycompany/app/my-app/1/my-app-1.jar /root/'
             }
         }
         stage('Deploy') {
