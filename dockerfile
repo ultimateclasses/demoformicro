@@ -5,3 +5,4 @@ FROM ubuntu:latest
 #RUN echo "<h1>Welcome to this app</h1>" > /var/www/html/index.html
 RUN apt-get update;
 WORKDIR /tmp/
+
